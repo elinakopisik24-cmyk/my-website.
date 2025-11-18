@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Еліна — Про мене</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1b1b1b, #111);
+            color: #e5e5e5;
+        }
+
+        header {
+            background: rgba(40, 40, 40, 0.9);
+            padding: 70px 25px;
+            text-align: center;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+        }
+
+        header h1 {
+            color: #a970ff;
+            font-size: 46px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 20px;
+            color: #cfcfcf;
+            opacity: 0.9;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #a970ff;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #d1d1d1;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        fieldset {
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 18px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(4px);
+        }
+
+        legend {
+            font-size: 16px;
+            color: #a970ff;
+            font-weight: 600;
+            padding: 0 6px;
+        }
+
+        label {
+            margin-top: 12px;
+            display: block;
+            color: #d9d9d9;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #a970ff;
+            box-shadow: 0 0 8px rgba(169,112,255,0.4);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            background: #a970ff;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(169,112,255,0.4);
+        }
+
+        .btn-primary:hover {
+            background: #995eff;
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: #cfcfcf;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #a970ff;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #a970ff;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Привіт! Я — Еліна</h1>
+        <p>Студентка комп'ютерних наук</p>
+    </header>
+
+    <section id="about">
+        <h2>Про мене</h2>
+        <p>Я навчаюсь у Рівненському фаховому коледжі інформаційних технологій за спеціальністю «Комп’ютерні науки». Пішла вчитись після 11 класу. 
+        Мені подобається сфера ІТ, створення сайтів, дизайн та робота з технологіями.</p>
+
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="IT технології">
+    </section>
+
+    <section id="contact-form">
+        <h2>Написати мені</h2>
+
+        <form class="contact-form" action="#" method="post">
+            <fieldset>
+                <legend>Ваші дані</legend>
+
+                <label for="name">Ім'я</label>
+                <input type="text" id="name" placeholder="Введіть ім'я">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="elinakopisik24@gmail.com">
+            </fieldset>
+
+            <fieldset>
+                <legend>Повідомлення</legend>
+
+                <label for="message">Текст</label>
+                <textarea id="message" rows="6" placeholder="Напишіть повідомлення..."></textarea>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Очистити</button>
+                <button type="submit" class="btn btn-primary">Відправити</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        Відвідайте мій сайт: 
+        <a href="https://elinakopisik24.github.io" target="_blank">https://elinakopisik24.github.io</a>
+    </footer>
+
+</body>
+</html>
